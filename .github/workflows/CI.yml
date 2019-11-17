@@ -11,4 +11,4 @@ jobs:
       - name: message test
         uses: SoraKumo001/github-action
         with:
-          message: "ふぉっふぉふぉ"
+          message: abcdef
