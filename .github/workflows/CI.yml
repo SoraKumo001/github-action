@@ -9,6 +9,6 @@ jobs:
     steps:
       - uses: actions/checkout@v1
       - name: message test
-        uses: SoraKumo001/github-action
+        uses: SoraKumo001/github-action@master
         with:
           message: abcdef
