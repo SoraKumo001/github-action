@@ -8,7 +8,10 @@ var __importStar = (this && this.__importStar) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", { value: true });
 const core = __importStar(require("@actions/core"));
+console.log("console");
 core.startGroup("GitHub Action Test");
 const message = core.getInput("message", { required: true });
 core.debug(message);
+core.debug("ふぉっふぉっふぉ");
+console.log("console");
 core.endGroup();
