@@ -26,8 +26,3 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           PUBLISH_BRANCH: release
           PUBLISH_DIR: ./dist
-      - name: test
-        if: contains(github.ref, 'tags/test')
-        uses: SoraKumo001/github-action@release
-        with:
-          message: 'テストメッセージ'
