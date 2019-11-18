@@ -25,7 +25,7 @@ jobs:
         # if: contains(github.ref, 'tags/release')
         run: |
           remote_url=`git remote get-url --push origin`
-          export
+          echo $remote_url
           cd dist
           git init
           git config --global github.token $GITHUB_TOKEN
