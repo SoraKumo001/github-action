@@ -30,7 +30,7 @@ jobs:
           cp -r .git dist/
           cd dist
           # git config --global user.name $GITHUB_ACTOR
-          # git config --global user.email ${GITHUB_ACTOR}@git
+          # git config --global user.email ${GITHUB_ACTOR}@git 1
           git checkout --force -b release
           git remote set-url origin $remote_url
           git add index.js action.yml
