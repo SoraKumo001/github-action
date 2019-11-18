@@ -20,5 +20,16 @@ jobs:
       - name: build
         run: yarn build
       - name: deploy
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         # if: contains(github.ref, 'tags/release')
-        run: export
+        run: |
+          remote_url=`git remote get-url --push origin`
+          cd dist
+          git init
+          git config --local github.token $GITHUB_TOKEN
+          git config --local user.name $GITHUB_ACTOR
+          git add remote origin $remote_url
+          git add .
+          git commit -m "Release"
+          git push
