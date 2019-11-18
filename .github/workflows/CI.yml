@@ -30,8 +30,8 @@ jobs:
           cd dist
           git config --global user.name $GITHUB_ACTOR
           git config --global user.email ${GITHUB_ACTOR}@git
-          git checkout --force -b release
+          git checkout -f -b release
           git remote set-url origin $remote_url
           git add index.js action.yml
           git commit -m "Release"
-          git push -f
+          git push  origin release -f
