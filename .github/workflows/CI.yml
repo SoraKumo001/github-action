@@ -29,6 +29,7 @@ jobs:
           git init
           git config --local github.token $GITHUB_TOKEN
           git config --local user.name $GITHUB_ACTOR
+          git checkout -b release
           git remote add origin $remote_url
           git add .
           git commit -m "Release"
