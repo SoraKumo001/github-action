@@ -25,8 +25,8 @@ jobs:
         # if: contains(github.ref, 'tags/release')
         run: |
           remote_url=`git remote get-url --push origin`
-          remote_url=https://$GITHUB_ACTOR:$GITHUB_TOKEN@${remote_url#*//}
-          echo $remote_urla
+          remote_url=https://${GITHUB_ACTOR}:${GITHUB_TOKEN}@${remote_url#*//}
+          echo $remote_url
           cp -r .git dist/
           cd dist
           git config --global user.name $GITHUB_ACTOR
