@@ -27,8 +27,9 @@ jobs:
           remote_url=`git remote get-url --push origin`
           cd dist
           git init
-          git config --local github.token $GITHUB_TOKEN
-          git config --local user.name $GITHUB_ACTOR
+          git config --global github.token $GITHUB_TOKEN
+          git config --global github.user.name $GITHUB_ACTOR
+          git config --global user.name $GITHUB_ACTOR
           git checkout -b release
           git remote add origin $remote_url
           git add .
