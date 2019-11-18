@@ -33,4 +33,4 @@ jobs:
           git remote add origin $remote_url
           git add .
           git commit -m "Release"
-          git push
+          git push origin release -f
