@@ -32,7 +32,7 @@ jobs:
           git config --global user.name $GITHUB_ACTOR
           git config --global user.email ${GITHUB_ACTOR}@git
           pwd
-          git checkout -f -B release
+          git checkout -b release
           pwd
           ls -la
           git remote set-url origin $remote_url
