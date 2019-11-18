@@ -27,14 +27,13 @@ jobs:
           remote_url=`git remote get-url --push origin`
           remote_url=https://$GITHUB_ACTOR:$GITHUB_TOKEN@${remote_url#*//}
           echo remote_url
+          cp -r .git dist/
           cd dist
-          git init
-          git config --global github.token $GITHUB_TOKEN
-          git config --global github.user.name $GITHUB_ACTOR
+          # git init
           git config --global user.name $GITHUB_ACTOR
           git config --global user.email ${GITHUB_ACTOR}@git
-          git checkout -b release
+          git checkout --force -b release
           git remote add origin $remote_url
-          git add .
+          git add index.js action.yml
           git commit -m "Release"
           git push origin release -f
