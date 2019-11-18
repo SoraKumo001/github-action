@@ -31,6 +31,7 @@ jobs:
           git config --global github.token $GITHUB_TOKEN
           git config --global github.user.name $GITHUB_ACTOR
           git config --global user.name $GITHUB_ACTOR
+          git config --global user.email ${GITHUB_ACTOR}@git
           git checkout -b release
           git remote add origin $remote_url
           git add .
