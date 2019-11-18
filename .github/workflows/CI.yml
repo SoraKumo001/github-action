@@ -35,4 +35,4 @@ jobs:
           git remote set-url origin $remote_url
           git add index.js action.yml
           git commit -m "Release"
-          git push origin release -f
+          git push -f origin release
