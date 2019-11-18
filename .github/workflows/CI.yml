@@ -28,9 +28,11 @@ jobs:
           remote_url=https://$GITHUB_ACTOR:$GITHUB_TOKEN@${remote_url#*//}
           cp -r .git dist/
           cd dist
+          ls -la
           git config --global user.name $GITHUB_ACTOR
           git config --global user.email ${GITHUB_ACTOR}@git
           git checkout -f -b release
+          ls -la
           git remote set-url origin $remote_url
           git add index.js action.yml
           git commit -m "Release"
