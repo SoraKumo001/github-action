@@ -33,7 +33,7 @@ jobs:
           git config --global user.name $GITHUB_ACTOR
           git config --global user.email ${GITHUB_ACTOR}@git
           git checkout --force -b release
-          git remote add origin $remote_url
+          # git remote add origin $remote_url
           git add index.js action.yml
           git commit -m "Release"
           git push origin release -f
